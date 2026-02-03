@@ -21,7 +21,6 @@ body {
     min-height: 100dvh;
     overflow-x: hidden;
     background-color: #050505;
-    /* Blacker background for contrast and efficiency */
 }
 
 /* Performance Utilities */
@@ -37,4 +36,22 @@ body {
 #root {
     width: 100%;
     min-height: 100vh;
+}
+
+@keyframes shimmer {
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes scale-x {
+
+    0%,
+    100% {
+        transform: scaleX(1);
+    }
+
+    50% {
+        transform: scaleX(1.5);
+    }
 }

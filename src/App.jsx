@@ -2,6 +2,7 @@ import { lazy, Suspense, useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Waves from './components/Waves/Waves';
+// Vercel deployment trigger - v2
 import './styles/theme.css';
 
 // Lazy loading pages for better performance (Velocity Skill)

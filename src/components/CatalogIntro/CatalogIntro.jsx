@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import HighFidelityImage from '../shared/HighFidelityImage';
 
 export default function CatalogIntro() {
     const sectionRef = useRef(null);
@@ -29,7 +30,7 @@ export default function CatalogIntro() {
         <section ref={sectionRef} className="relative h-[85vh] flex items-end pb-6 sm:pb-12 md:pb-16 overflow-hidden">
             {/* Hero Image Background */}
             <div className="absolute inset-0 overflow-hidden">
-                <img
+                <HighFidelityImage
                     src="/catalog-hero.jpg"
                     alt="Escultura en espacio de exhibición"
                     className="w-full h-full object-cover hero-bg"

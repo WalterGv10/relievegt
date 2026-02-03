@@ -1,5 +1,5 @@
 import { Camera, Mesh, Plane, Program, Renderer, Texture, Transform } from 'ogl';
-import { useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import './CircularGallery.css';
 
 function debounce(func, wait) {
@@ -464,11 +464,37 @@ export default function CircularGallery({
     scrollEase = 0.05
 }) {
     const containerRef = useRef(null);
+    const [isLoading, setIsLoading] = useState(true);
+
     useEffect(() => {
         const app = new App(containerRef.current, { items, bend, textColor, borderRadius, font, scrollSpeed, scrollEase });
+
+        // Simulate a slight delay for texture prep or wait for first render
+        const timer = setTimeout(() => {
+            setIsLoading(false);
+        }, 1200);
+
         return () => {
+            clearTimeout(timer);
             app.destroy();
         };
     }, [items, bend, textColor, borderRadius, font, scrollSpeed, scrollEase]);
-    return <div className="circular-gallery" ref={containerRef} />;
+
+    return (
+        <div className="relative w-full h-full min-h-[400px]">
+            {isLoading && (
+                <div className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-black/40 backdrop-blur-md">
+                    <div className="w-12 h-px bg-amber-400/50 mb-6 animate-[scale-x_2s_infinite]" />
+                    <span className="text-[10px] uppercase tracking-[0.4em] text-amber-100 font-bold animate-pulse">
+                        Sincronizando Texturas HD
+                    </span>
+                    <p className="text-[8px] text-white/30 mt-2 uppercase tracking-[0.2em]">Optimización Volumétrica</p>
+                </div>
+            )}
+            <div className="circular-gallery h-full" ref={containerRef} />
+        </div>
+    );
 }
+
+// Add scale-x animation to index.css if not present
+

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import HighFidelityImage from '../shared/HighFidelityImage';
 
 export default function ProductCard({ product }) {
     const [showInfo, setShowInfo] = useState(false);
@@ -13,7 +14,7 @@ export default function ProductCard({ product }) {
             {/* Image Layer */}
             <div className="absolute inset-0 overflow-hidden">
                 {product.image ? (
-                    <img
+                    <HighFidelityImage
                         src={product.image}
                         alt={product.name}
                         className="w-full h-full object-cover transition-transform duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-115"
