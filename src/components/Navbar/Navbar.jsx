@@ -184,12 +184,14 @@ export default function Navbar() {
                     </Link>
                 ))}
 
-                <Link
-                    to="/contacto"
+                <a
+                    href="https://wa.me/50236850866?text=Hola%20RelieveGt,%20me%20gustar%C3%ADa%20cotizar%20un%20proyecto."
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="mt-8 px-10 py-4 text-fluid-body font-medium text-black bg-white rounded-full hover:scale-105 transition-transform"
                 >
                     Cotizar Proyecto
-                </Link>
+                </a>
             </div>
         </nav>
     );
