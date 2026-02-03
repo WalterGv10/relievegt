@@ -143,11 +143,18 @@ export default function Catalog() {
             <section ref={gridRef} className="px-3 sm:px-6 md:px-8 pb-12 sm:pb-16 bg-black/50 overflow-hidden">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5 lg:gap-8">
-                        {products.map((product) => (
-                            <div key={product.id} className="product-card-anim">
-                                <ProductCard product={product} />
-                            </div>
-                        ))}
+                        {products
+                            .filter(product => {
+                                // Exclude spotlight items (already shown above)
+                                const spotlightIds = [31, 30, 7, 8, 12, 9, 11];
+                                // Only show catalog items (up to ID 28)
+                                return !spotlightIds.includes(product.id) && product.id <= 28;
+                            })
+                            .map((product) => (
+                                <div key={product.id} className="product-card-anim">
+                                    <ProductCard product={product} />
+                                </div>
+                            ))}
                     </div>
                 </div>
             </section>

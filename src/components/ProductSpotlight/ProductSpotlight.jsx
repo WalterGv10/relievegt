@@ -33,8 +33,8 @@ export default function ProductSpotlight({ title, description, images, align = '
                     </p>
                 </div>
 
-                {/* Gallery */}
-                <div className="h-[400px] sm:h-[500px] lg:h-[600px] w-full relative z-0 mt-8 rounded-2xl overflow-hidden border border-white/5 bg-black/20">
+                {/* Gallery - Optimized for mobile scroll */}
+                <div className="h-[300px] sm:h-[400px] lg:h-[600px] w-full relative z-0 mt-8 rounded-2xl overflow-hidden border border-white/5 bg-black/20">
                     <CircularGallery
                         items={filledImages}
                         bend={2}
@@ -44,9 +44,23 @@ export default function ProductSpotlight({ title, description, images, align = '
                         scrollSpeed={2}
                     />
 
-                    {/* Overlay Gradient for integration */}
+                    {/* Overlay Gradients */}
                     <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#0a0a0a] to-transparent pointer-events-none" />
                     <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#0a0a0a] to-transparent pointer-events-none" />
+
+                    {/* Mobile Scroll Hint - Bottom */}
+                    <div className="md:hidden absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 pointer-events-none z-10">
+                        <div className="px-4 py-2 bg-black/60 backdrop-blur-sm rounded-full border border-white/10">
+                            <p className="text-[9px] text-white/60 uppercase tracking-wider">Desliza aquí para continuar ↓</p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Mobile Safe Scroll Zone */}
+                <div className="md:hidden h-16 -mt-8 relative z-10 touch-pan-y" style={{ touchAction: 'pan-y' }}>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-full h-px bg-gradient-to-r from-transparent via-amber-400/20 to-transparent" />
+                    </div>
                 </div>
 
             </div>

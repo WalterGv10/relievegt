@@ -68,20 +68,20 @@ export default function Footer() {
             <div className="container-padding max-w-7xl mx-auto mt-8 pt-6 border-t border-white/5">
                 <div className="flex flex-col items-center gap-3">
                     <div className="flex items-center gap-2 group">
-                        <span className="text-[9px] text-white/20 uppercase tracking-[0.3em] font-medium">
+                        <span className="text-[10px] sm:text-[9px] text-white/30 uppercase tracking-[0.25em] sm:tracking-[0.3em] font-medium">
                             Crafted by
                         </span>
                         <a
                             href="https://walweb.vercel.app/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="relative text-xs font-bold bg-gradient-to-r from-amber-400/80 to-amber-200/80 bg-clip-text text-transparent hover:from-amber-300 hover:to-amber-100 transition-all duration-300"
+                            className="relative text-sm sm:text-xs font-bold bg-gradient-to-r from-amber-400 to-amber-200 bg-clip-text text-transparent hover:from-amber-300 hover:to-amber-100 transition-all duration-300"
                         >
                             WalWeb
                             <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-gradient-to-r from-amber-400 to-amber-200 group-hover:w-full transition-all duration-300" />
                         </a>
                     </div>
-                    <p className="text-[8px] text-white/15 italic tracking-wide">
+                    <p className="text-[9px] sm:text-[8px] text-white/20 italic tracking-wide text-center px-4">
                         Premium Web Development & Digital Experiences
                     </p>
                 </div>
