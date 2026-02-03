@@ -28,7 +28,8 @@ export default function Navbar() {
     }, [location]);
 
     useEffect(() => {
-        // Entrance Animation
+        // Entrance Animation - Temporarily disabled for stability check
+        /*
         const ctx = gsap.context(() => {
             gsap.from(".logo-nav", {
                 opacity: 0,
@@ -53,47 +54,20 @@ export default function Navbar() {
                 ease: "elastic.out(1, 0.8)",
                 delay: 0.6
             });
-
-            // Magnetic Button Logic
-            const mBtn = navRef.current?.querySelector('.cta-magnetic');
-            if (mBtn) {
-                const onMouseMove = (e) => {
-                    const { clientX, clientY } = e;
-                    const { left, top, width, height } = mBtn.getBoundingClientRect();
-                    const x = clientX - (left + width / 2);
-                    const y = clientY - (top + height / 2);
-                    gsap.to(mBtn, {
-                        x: x * 0.35,
-                        y: y * 0.35,
-                        duration: 0.6,
-                        ease: "power2.out"
-                    });
-                };
-                const onMouseLeave = () => {
-                    gsap.to(mBtn, {
-                        x: 0,
-                        y: 0,
-                        duration: 0.7,
-                        ease: "elastic.out(1, 0.3)"
-                    });
-                };
-                mBtn.addEventListener('mousemove', onMouseMove);
-                mBtn.addEventListener('mouseleave', onMouseLeave);
-                return () => {
-                    mBtn.removeEventListener('mousemove', onMouseMove);
-                    mBtn.removeEventListener('mouseleave', onMouseLeave);
-                };
-            }
+            // ... (Magnetic logic kept if inside, but commented out for now to ensure clicks work)
         }, navRef);
         return () => ctx.revert();
+        */
+
+        // Keep Magnetic Button Logic standalone if needed, or simple CSS for now
     }, []);
 
     return (
         <nav
             ref={navRef}
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
-                ? 'bg-black/80 backdrop-blur-xl border-b border-white/10'
-                : 'bg-black/0 backdrop-blur-sm'
+            className={`fixed top-0 left-0 right-0 z-[999] pointer-events-auto transition-all duration-500 ${isScrolled
+                ? 'bg-black/90 backdrop-blur-xl border-b border-white/10'
+                : 'bg-gradient-to-b from-black/80 to-transparent backdrop-blur-[2px]'
                 }`}
         >
             <div className="mx-auto w-full container-padding">
