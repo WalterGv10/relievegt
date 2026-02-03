@@ -1,48 +1,35 @@
 export default function Hero() {
     return (
-        <section className="relative flex flex-col items-center justify-center min-h-[90vh] px-4 sm:px-6 py-20 overflow-hidden">
-            {/* Subtle lighting overlay to mimic gallery feel */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-black via-transparent to-white/5 pointer-events-none" />
+        <section className="relative flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 py-16">
+            <div className="max-w-5xl w-full text-center space-y-8 sm:space-y-12 md:space-y-16">
 
-            <div className="max-w-6xl w-full space-y-12 sm:space-y-16 animate-monumental-in relative z-10">
-                <div className="space-y-6 sm:space-y-8 text-center">
-                    {/* Main Statement */}
-                    <h2 className="text-sm sm:text-base md:text-lg font-medium tracking-[0.4em] uppercase text-brand-accent/80 mb-4">
-                        Escala que impone presencia
-                    </h2>
+                {/* Main Headline */}
+                <div className="space-y-4 sm:space-y-6">
+                    <p className="text-sm sm:text-base md:text-lg tracking-[0.3em] uppercase text-gray-400 font-light">
+                        Impresión 3D de gran formato
+                    </p>
 
-                    {/* Main Headline */}
-                    <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold tracking-tighter leading-none select-none">
-                        <span className="block text-white">No imprimimos objetos.</span>
-                        <span className="block bg-clip-text text-transparent bg-gradient-to-b from-white to-white/20">
+                    <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-tight leading-tight text-white">
+                        No imprimimos objetos.
+                        <br />
+                        <span className="font-normal bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">
                             Imprimimos presencia.
                         </span>
                     </h1>
                 </div>
 
-                {/* Supporting Copy */}
-                <div className="max-w-3xl mx-auto space-y-8 text-center">
-                    <p className="text-xl sm:text-2xl md:text-4xl font-light text-gray-400 tracking-tight leading-snug text-balance">
-                        “Cuando el tamaño importa, la impresión también.”
-                    </p>
+                {/* Subtle tagline */}
+                <p className="text-base sm:text-lg md:text-xl text-gray-400 font-light max-w-2xl mx-auto leading-relaxed">
+                    Piezas monumentales. Precisión milimétrica. Presencia que transforma espacios.
+                </p>
 
-                    <div className="h-px w-24 bg-brand-accent/30 mx-auto" />
-
-                    <p className="text-sm sm:text-base md:text-lg text-gray-500 uppercase tracking-widest leading-relaxed font-semibold">
-                        Monumental • Escultural • Industrial
-                    </p>
-                </div>
-
-                {/* CTA */}
-                <div className="flex flex-col sm:flex-row gap-6 justify-center pt-8">
-                    <button className="px-12 py-5 bg-white text-black font-bold uppercase tracking-widest text-xs hover:bg-white/90 transition-all transform hover:scale-105 shadow-2xl">
-                        Inicia un proyecto monumental
-                    </button>
-                </div>
             </div>
 
-            {/* Side lighting effect */}
-            <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-white/5 to-transparent pointer-events-none" />
+            {/* Scroll Indicator */}
+            <div className="absolute bottom-8 sm:bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-500">
+                <span className="text-xs tracking-widest uppercase">Descubre</span>
+                <div className="w-px h-8 bg-gradient-to-b from-gray-500 to-transparent animate-pulse" />
+            </div>
         </section>
     );
 }
