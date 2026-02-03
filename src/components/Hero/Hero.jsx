@@ -36,8 +36,8 @@ export default function Hero() {
 
                 {/* Subtitle */}
                 <div className="max-w-[60ch] mx-auto">
-                    <p className="text-fluid-body text-amber-100/90 font-normal leading-relaxed drop-shadow-lg">
-                        Piezas monumentales. Precisión milimétrica. Presencia que transforma espacios. <span className="opacity-70 italic text-[0.9em]">Pero también hacemos llaveros de bolsillo, al cliente lo que pida.</span>
+                    <p className="text-fluid-body text-amber-300 font-medium leading-relaxed drop-shadow-[0_2px_10px_rgba(251,191,36,0.3)]">
+                        Piezas monumentales. Precisión milimétrica. Presencia que transforma espacios. <span className="text-amber-200/80 italic text-[0.9em]">Pero también hacemos llaveros de bolsillo, al cliente lo que pida.</span>
                     </p>
                 </div>
 
