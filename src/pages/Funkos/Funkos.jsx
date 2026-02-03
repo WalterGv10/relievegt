@@ -11,10 +11,11 @@ export default function Funkos() {
 
     // Highlight Data (Real User Images)
     const featuredFunkoImages = [
-        { image: '/catalog/funkos-showcase/magician.png', text: 'Detalle' },
-        { image: '/catalog/funkos-showcase/executive.png', text: 'Corporativo' },
-        { image: '/catalog/funkos-showcase/clown.png', text: 'Personaje' },
-        { image: '/catalog/funkos-showcase/curly.png', text: 'Estilo' },
+        { image: '/catalog/funkos-showcase/leo.png', text: 'Mascotas' },
+        { image: '/catalog/funkos-showcase/antonella.png', text: 'Kids' },
+        { image: '/catalog/funkos-showcase/solye.png', text: 'Lifestyle' },
+        { image: '/catalog/funkos-showcase/west.png', text: 'Fandom' },
+        { image: '/catalog/funkos-showcase/cheche.png', text: 'Personal' },
     ];
 
     return (
