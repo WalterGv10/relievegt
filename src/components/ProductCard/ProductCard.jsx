@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import HighFidelityImage from '../shared/HighFidelityImage';
+import OptimizedImage from '../shared/OptimizedImage';
 
 export default function ProductCard({ product }) {
     const [showInfo, setShowInfo] = useState(false);
@@ -14,11 +14,14 @@ export default function ProductCard({ product }) {
             {/* Image Layer */}
             <div className="absolute inset-0 overflow-hidden">
                 {product.image ? (
-                    <HighFidelityImage
+                    <OptimizedImage
                         src={product.image}
                         alt={product.name}
-                        className="w-full h-full object-cover transition-transform duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-115"
-                        loading="lazy"
+                        width={700}
+                        height={933}
+                        aspectRatio={3 / 4}
+                        className="w-full h-full transition-transform duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-110"
+                        priority={false}
                     />
                 ) : (
                     <div className="w-full h-full bg-gradient-to-br from-gray-900 to-black flex items-center justify-center">
