@@ -11,7 +11,7 @@ export default function Home() {
         <div className="relative z-10 text-white">
             <SEO
                 title="RelieveGt - Impresión 3D de Gran Formato"
-                description="No imprimimos objetos. Imprimimos presencia. Especialistas en piezas monumentales, esculturas y prototipos industriales a gran escala."
+                description="Especialistas en impresión 3D de gran formato en Guatemala. Creamos piezas monumentales, esculturas artísticas, publicidad volumétrica y prototipos industriales con precisión milimétrica y presencia inigualable."
                 name="RelieveGt"
                 type="website"
             />

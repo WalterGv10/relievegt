@@ -45,8 +45,8 @@ export default function Catalog() {
     return (
         <div className="relative z-10 text-amber-100 pt-16 sm:pt-20">
             <SEO
-                title="Catálogo - RelieveGt"
-                description="Colección de piezas de gran formato."
+                title="Catálogo de Artistas y Personajes - RelieveGt"
+                description="Explora nuestra colección de cabezones y esculturas 3D de gran formato: Bad Bunny, Karol G, Daddy Yankee, personajes de cine y más. Piezas únicas impresas en alta resolución."
                 name="RelieveGt"
                 type="website"
             />
