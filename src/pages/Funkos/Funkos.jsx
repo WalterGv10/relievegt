@@ -9,11 +9,12 @@ export default function Funkos() {
     // Filter only Funkos
     const funkosProducts = products.filter(p => p.type === 'Funko' || p.name.includes('Funko') || p.name.includes('Caricatura'));
 
-    // Highlight Data (Using existing placeholders for now)
+    // Highlight Data (Real User Images)
     const featuredFunkoImages = [
-        { image: '/catalog/mega-caricatura-influencer/front.jpg', text: 'Custom' },
-        { image: '/catalog/mega-caricatura-influencer/side.jpg', text: 'Box' },
-        { image: '/catalog/mega-caricatura-influencer/action.jpg', text: 'Detail' },
+        { image: '/catalog/funkos-showcase/magician.png', text: 'Detalle' },
+        { image: '/catalog/funkos-showcase/executive.png', text: 'Corporativo' },
+        { image: '/catalog/funkos-showcase/clown.png', text: 'Personaje' },
+        { image: '/catalog/funkos-showcase/curly.png', text: 'Estilo' },
     ];
 
     return (

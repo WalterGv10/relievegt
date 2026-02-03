@@ -27,8 +27,8 @@ export default function Contact() {
         {
             icon: <FaEnvelope className="w-8 h-8 md:w-10 md:h-10" />,
             label: 'Correo Electrónico',
-            value: 'info@relievegt.com',
-            href: 'mailto:info@relievegt.com',
+            value: 'Cenamorado901@gmail.com',
+            href: 'mailto:Cenamorado901@gmail.com',
             color: 'hover:text-amber-400'
         }
     ];

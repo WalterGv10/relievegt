@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home/Home';
 import Catalog from './pages/Catalog/Catalog';
+import Funkos from './pages/Funkos/Funkos';
 import Contact from './pages/Contact/Contact';
 import Waves from './components/Waves/Waves';
 import './styles/theme.css';
